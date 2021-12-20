@@ -1,0 +1,8 @@
+C:\Users\taken\Desktop\My_File\Rimworld\TimeStopMod\Assemblies\TimeStopMod.dll
+C:\Users\taken\Desktop\TimeStopMod\Source\TimeStopMod\obj\Debug\TimeStopMod.csproj.CoreCompileInputs.cache
+C:\Users\taken\Desktop\TimeStopMod\Source\TimeStopMod\obj\Debug\TimeStopMod.csproj.CopyComplete
+C:\Users\taken\Desktop\TimeStopMod\Source\TimeStopMod\obj\Debug\TimeStopMod.dll
+C:\Users\taken\Desktop\TimeStopMod\Source\TimeStopMod\obj\Debug\TimeStopMod.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\TimeStopMod\Assemblies\TimeStopMod.dll
+C:\Users\taken\Desktop\My_File\Rimworld\TimeStopMod\Source\TimeStopMod\obj\Debug\TimeStopMod.csproj.CoreCompileInputs.cache
+C:\Users\taken\Desktop\My_File\Rimworld\TimeStopMod\Source\TimeStopMod\obj\Debug\TimeStopMod.dll

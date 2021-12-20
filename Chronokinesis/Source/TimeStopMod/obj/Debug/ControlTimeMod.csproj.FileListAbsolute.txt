@@ -1,0 +1,3 @@
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Grumpy Time Lord\Source\TimeStopMod\obj\Debug\ControlTimeMod.csproj.CoreCompileInputs.cache
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Grumpy Time Lord\1.3\Assemblies\ControlTimeMod.dll
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Grumpy Time Lord\Source\TimeStopMod\obj\Debug\ControlTimeMod.dll

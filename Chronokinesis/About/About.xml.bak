@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Chronokinesis</name>
+  <author>6taro</author>
+  <packageId>6taro.Grumpy.Chronokinesis</packageId>
+  <description>
+	Adds a trait named Chronokinesis which gives a pawn the ability to stop time.
+  </description>
+  <supportedVersions>
+    <li>1.3</li>
+  </supportedVersions>
+  <modDependenciesByVersion>
+    <v1.3>
+      <li>
+        <packageId>brrainz.harmony</packageId>
+        <displayName>Harmony</displayName>
+        <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077</steamWorkshopUrl>
+        <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+      </li>
+      <li>
+        <packageId>UnlimitedHugs.HugsLib</packageId>
+        <displayName>HugsLib</displayName>
+        <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=818773962</steamWorkshopUrl>
+        <downloadUrl>https://ludeon.com/forums/index.php?topic=28066.0</downloadUrl>
+      </li>
+      <li>
+        <packageId>jecrell.jecstools</packageId>
+        <displayName>JecsTools</displayName>
+        <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=932008009</steamWorkshopUrl>
+        <downloadUrl>https://discord.gg/AaVFA7V</downloadUrl>
+      </li>
+    </v1.3>
+  </modDependenciesByVersion>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>UnlimitedHugs.HugsLib</li>
+    <li>jecrell.jecstools</li>
+  </loadAfter>
+</ModMetaData>

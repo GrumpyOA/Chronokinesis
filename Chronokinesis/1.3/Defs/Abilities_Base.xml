@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+   <AbilityUser.AbilityDef Name="ControlTimeMod">
+    <abilityClass>AbilityUser.PawnAbility</abilityClass>
+    <uiIconPath>UI/suspendTime</uiIconPath>
+    <defName>TimeStopAbility</defName>
+    <label>Suspend Time</label>
+    <description>Everything except myself stops.</description>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>ControlTimeMod.Verb_TimeStop</verbClass>
+			  <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			  <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			  <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			  <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+        <hasStandardCommand>true</hasStandardCommand>
+        <abilityDef>TimeStopAbility</abilityDef>
+        <isViolent>false</isViolent>
+        <warmupTime>0</warmupTime>
+        <SecondsToRecharge>0</SecondsToRecharge>
+        <range>0</range>
+        <muzzleFlashScale>10</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+        <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+        <targetParams>
+            <canTargetPawns>true</canTargetPawns>
+            <canTargetBuildings>false</canTargetBuildings>
+            <canTargetSelf>true</canTargetSelf>
+            <canTargetLocations>false</canTargetLocations>
+        </targetParams>
+        <hediffsToApply>
+	        <li>
+	          <hediffDef>TimeStopAbilityHD</hediffDef>
+	          <applyChance>1.0</applyChance>
+			  <severity>1.0</severity>
+	        </li>
+        </hediffsToApply>
+    </MainVerb>
+  </AbilityUser.AbilityDef>
+
+  <HediffDef>
+    <defName>TimeStopAbilityHD</defName>
+	  <hediffClass>HediffWithComps</hediffClass>
+	  <label>Suspended Time</label>
+    <description>Suspended Time</description>
+    <defaultLabelColor>(.4,.65,1)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+	  <makesSickThought>false</makesSickThought>
+	  <tendable>false</tendable>
+	  <maxSeverity>6.0</maxSeverity>
+	  <initialSeverity>.5</initialSeverity>
+	  <isBad>false</isBad>
+	  <comps>
+      <li>
+        <compClass>ControlTimeMod.HediffComp_TimeStop</compClass>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.5</severityPerDay>
+      </li>	  
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>TimeStopShieldHD</defName>
+	  <hediffClass>HediffWithComps</hediffClass>
+	  <label>Suspended Time Shield</label>
+    <description>Suspended Time Shield</description>
+    <defaultLabelColor>(.4,.65,1)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+	  <makesSickThought>false</makesSickThought>
+	  <tendable>false</tendable>
+	  <maxSeverity>6.0</maxSeverity>
+	  <initialSeverity>.5</initialSeverity>
+	  <isBad>false</isBad>
+	  <comps>
+      <li>
+        <compClass>ControlTimeMod.HediffComp_TimeStopShield</compClass>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.5</severityPerDay>
+      </li>	  
+    </comps>
+  </HediffDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>TimeStopEffect</defName>
+    <graphicData>
+        <texPath>Effects/timestopeffect</texPath>
+        <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <thingClass>MoteThrownAttached</thingClass>
+    <altitudeLayer>Item</altitudeLayer>
+    <drawOffscreen>true</drawOffscreen>
+    <mote>
+        <fadeInTime>0</fadeInTime>
+        <solidTime>2</solidTime>
+        <fadeOutTime>1</fadeOutTime>
+        <collide>false</collide>
+        <growthRate>200</growthRate>
+    </mote>
+  </ThingDef>
+
+  <DamageDef Name="TM_LocalInjuryBase" Abstract="True">
+    <workerClass>DamageWorker_AddInjury</workerClass>
+  </DamageDef>
+
+	<TraitDef>
+		<defName>ControlTimeUser</defName>
+		<ignoreConfigErrors>true</ignoreConfigErrors>
+		<commonality>0</commonality>
+		<degreeDatas>	
+		  <li>
+			<label>Chronokinetic</label>
+			<description></description>
+			<degree>4</degree>
+			<statOffsets>
+			</statOffsets>
+		  </li>
+		</degreeDatas>
+	</TraitDef>
+
+  <JobDef>
+	  <defName>ControlTimeCastAbilityVerb</defName>
+	  <driverClass>ControlTimeMod.ControlTimeJobDriver_CastAbilityVerb</driverClass>
+	  <reportString>Using an ability</reportString>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+</Defs>
